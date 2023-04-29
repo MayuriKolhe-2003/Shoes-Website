@@ -9,8 +9,9 @@ const Hero = () => {
     <>
     <Banner />
     <Services />
-    <NewArrival />
+    
     <Deal />
+    <NewArrival />
     </>
 
   )

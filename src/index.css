@@ -466,6 +466,9 @@ a {
 
 
 /* New Arrival */
+.owl-carousel .owl-nav.disabled{
+  display: inline-block;
+}
 .product {
   display: block;
   width: 100%;
@@ -479,6 +482,9 @@ a {
 @media (max-width: 991.98px) {
   .product {
     margin-bottom: 30px;
+  }
+  .product-card{
+    width: 100%;
   }
 }
 
