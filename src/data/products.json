@@ -33,7 +33,9 @@
         "img": "assets/product-3.png",
         "category": "Lifestyle",
         "name": "Nike Free RN 2019 ",
-        "price": "$120.00"
+        "price": "$120.00",
+        "onSale":true,
+        "salePrice":"$90.00"
     },
     {
         "id": 3,
