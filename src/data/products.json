@@ -18,7 +18,10 @@
         "details": [
             " Exposed foam tongue",
             "Foam in the midsole"
-        ]
+        ],
+        "onSale":true,
+        "salePrice":"$90.00",
+        "type":"male"
     },
     {
         "id": 1,
@@ -26,21 +29,38 @@
         "category": "Lifestyle",
         "name": "Nike Free RN 2019 ",
         "price": "$120.00",
-        "description": "A springy ride for every run, the Peg's familiar, just-for-you feel returns to help you accomplish your goals. This version has the same responsiveness and neutral support you love but with improved comfort in those sensitive areas of your foot, like the arch and toes. Whether you're logging long marathon miles, squeezing in a speed session before the sun goes down or hopping into a spontaneous group jaunt, it's still the established road runner you can put your faith in, day after day, run after run. This design celebrates the Pegasus' history with Swoosh logos from the Peg 1, 24, 35 and 38."
+        "description": "A springy ride for every run, the Peg's familiar, just-for-you feel returns to help you accomplish your goals. This version has the same responsiveness and neutral support you love but with improved comfort in those sensitive areas of your foot, like the arch and toes. Whether you're logging long marathon miles, squeezing in a speed session before the sun goes down or hopping into a spontaneous group jaunt, it's still the established road runner you can put your faith in, day after day, run after run. This design celebrates the Pegasus' history with Swoosh logos from the Peg 1, 24, 35 and 38.",
+        "onSale":true,
+        "salePrice":"$90.00",
+        "type":"male"
     },
     {
         "id": 2,
         "img": "assets/product-3.png",
         "category": "Lifestyle",
-        "name": "Nike Free RN 2019 ",
-        "price": "$120.00"
+        "name": "Nike Free RN 2020 ",
+        "price": "$120.00",
+        "onSale":true,
+        "salePrice":"$90.00",
+        "type":"male"
     },
     {
         "id": 3,
         "img": "assets/product-3.png",
         "category": "Lifestyle",
         "name": "Nike Free RN 2019 ",
-        "price": "$120.00"
+        "price": "$120.00",
+        "type": "female",
+        "onSale":false
+    },
+    {
+        "id": 4,
+        "img": "assets/product-3.png",
+        "category": "Lifestyle",
+        "name": "Nike Free RN 2019 ",
+        "price": "$120.00",
+        "type": "female",
+        "onSale":false
     }
 
 ]
