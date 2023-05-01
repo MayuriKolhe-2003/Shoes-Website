@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from '../data/products.json';
 import Card from './AllProductsComponents/Card';
 
 export default function AllProduct() {
+    const [Malecheck, isMale] = useState(false);
+    const [Femalecheck, isFemale] = useState(false);
+    const [cards,changeCards] = useState(data);
+    const allprods = data;
 
-    console.log(data[0].name);
+    function malechange() {
+        isMale(document.getElementById('male').checked);
+
+        !Malecheck ?
+        changeCards(cards.filter((obj) => {
+            return (
+                obj.type == 'male'
+            )
+        }))
+        : changeCards(allprods)
+    }
+
+
+    function femalechange() {
+        isFemale(document.getElementById('female').checked);
+
+        !Femalecheck ?
+        changeCards(cards.filter((obj) => {
+            return (
+                obj.type == 'female'
+            )
+        }))
+        : changeCards(allprods)
+    }
 
     return (
         <div class="mt-4">
@@ -35,12 +62,12 @@ export default function AllProduct() {
                         <div class="mb-3">
                             <h5 class="fs-5 fw-normal mb-3">Gender</h5>
                             <div class="mb-2">
-                                <input class="me-1" type="checkbox" id="male" name="male" value="Male" />
-                                <label for="male"> Male</label>
+                                <input class="me-1" type="checkbox" id="male" name="male" value="Male" onChange={malechange} />
+                                <label for="male"> Male </label>
                             </div>
                             <div>
-                                <input class="me-1" type="checkbox" id="female" name="female" value="Female" />
-                                <label for="female"> Female</label>
+                                <input class="me-1" type="checkbox" id="female" name="female" value="Female" onChange={femalechange}/>
+                                <label for="female"> Female </label>
                             </div>
                         </div>
                     </form>
@@ -50,10 +77,17 @@ export default function AllProduct() {
 
                 <div class="col col-md-9">
                     <div class="row mx-2">
-                        <div class="container mt-4 col-6 col-md-3">
-                            <Card name={data[0].name} price={data[0].price} img={data[0].img} categ="Men's Shoe" />
-                        </div>
-                        <div class="container mt-4 col-6 col-md-3">
+                        {
+                            cards.map((obj) => {
+                                return (
+                                    <div class="container mt-4 col-6 col-md-3">
+                                        <Card name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" />
+                                    </div>
+                                )
+                            })
+                        }
+
+                        {/* <div class="container mt-4 col-6 col-md-3">
                             <Card name={data[0].name} price={data[0].price} img={data[0].img} categ="Women's Shoe" />
                         </div>
                         <div class="container mt-4 col-6 col-md-3">
@@ -61,7 +95,7 @@ export default function AllProduct() {
                         </div>
                         <div class="container mt-4 col-6 col-md-3">
                             <Card name={data[0].name} price={data[0].price} img={data[0].img} categ="Women's Shoe" onSale={data[2].onSale} salePrice={data[2].salePrice} />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

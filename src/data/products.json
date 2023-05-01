@@ -32,17 +32,27 @@
         "id": 2,
         "img": "assets/product-3.png",
         "category": "Lifestyle",
-        "name": "Nike Free RN 2019 ",
+        "name": "Nike Free RN 2020 ",
         "price": "$120.00",
         "onSale":true,
-        "salePrice":"$90.00"
+        "salePrice":"$90.00",
+        "type":"male"
     },
     {
         "id": 3,
         "img": "assets/product-3.png",
         "category": "Lifestyle",
         "name": "Nike Free RN 2019 ",
-        "price": "$120.00"
+        "price": "$120.00",
+        "type": "female"
+    },
+    {
+        "id": 4,
+        "img": "assets/product-3.png",
+        "category": "Lifestyle",
+        "name": "Nike Free RN 2019 ",
+        "price": "$120.00",
+        "type": "female"
     }
 
 ]

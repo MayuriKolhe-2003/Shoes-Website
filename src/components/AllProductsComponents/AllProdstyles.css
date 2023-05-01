@@ -19,3 +19,13 @@
     rotate: 10deg;
     transform: translate(0px, -30px);
 }
+
+.card-bg{
+    transition: 0.5s;
+    background-color: rgb(241, 241, 241)
+}
+
+.card-bg:hover{
+    transition: 0.5s;
+    background-color: rgb(219, 219, 219);
+}

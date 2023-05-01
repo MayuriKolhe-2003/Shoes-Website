@@ -9,11 +9,11 @@ export default function Card(props) {
 
         <div class="card shadow-sm border border-0">
             <div class="main-shoe container card-body">
-                <div class="bg-light">
+                <div class="card-bg">
                     <img src={props.img} class="shoe-all-imag img-fluid" ></img>
-                    <div class="d-flex justify-content-between">
-                        <i class="fs-4"><AiOutlineShoppingCart /></i>
-                        <i class="fs-4"><BsBagHeart /></i>
+                    <div class="all-icons d-flex justify-content-between">
+                        <i class="fs-4 ps-2 pb-2"><AiOutlineShoppingCart /></i>
+                        <i class="fs-4 pe-2"><BsBagHeart /></i>
                     </div>
 
                 </div>
