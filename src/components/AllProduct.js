@@ -81,7 +81,7 @@ export default function AllProduct() {
                             cards.map((obj) => {
                                 return (
                                     <div class="container mt-4 col-6 col-md-3">
-                                        <Card name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" />
+                                        <Card name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" onSale={obj.onSale} salePrice={obj.salePrice} type={obj.type}/>
                                     </div>
                                 )
                             })

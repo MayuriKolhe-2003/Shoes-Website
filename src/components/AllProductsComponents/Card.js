@@ -20,7 +20,7 @@ export default function Card(props) {
 
                 <p class="text-success mb-0">In Stock</p>
                 <h5 class="card-title mb-2">{props.name}</h5>
-                <h6 class="card-subtitle text-body-secondary text-muted fw-light">{props.categ}</h6>
+                <h6 class="card-subtitle text-body-secondary text-muted fw-light">{props.type == 'male' ? "Men's Shoe" : "Women's Shoe"}</h6>
                 {
                     props.onSale
                         ? <p class="card-text fw-medium mt-2">MRP : <span class="text-muted text-decoration-line-through">{props.price}</span> {props.salePrice}</p>
