@@ -2,9 +2,10 @@ import React from 'react';
 import './AllProdstyles.css';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { BsBagHeart } from 'react-icons/bs'
+
+
 export default function Card(props) {
-
-
+    
     return (
 
         <div class="card shadow-sm border border-0">

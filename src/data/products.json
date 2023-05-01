@@ -1,6 +1,6 @@
 [
     {
-        "id": 10,
+        "id": 0,
         "img": "assets/product-3.png",
         "category": "Lifestyle",
         "name": "Nike Free RN 2019 ",
@@ -51,6 +51,7 @@
         "name": "Nike Free RN 2019 ",
         "price": "$120.00",
         "type": "female",
+        "salePrice":"$120.00",
         "onSale":false
     },
     {
@@ -60,6 +61,7 @@
         "name": "Nike Free RN 2019 ",
         "price": "$120.00",
         "type": "female",
+        "salePrice":"$120.00",
         "onSale":false
     }
 
