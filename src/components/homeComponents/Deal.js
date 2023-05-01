@@ -4,7 +4,7 @@ const Deal = () => {
   return (
     <>
     <section className=" ftco-choose ">
-    	<div className="container">
+    	<div className="w-100">
 				<div className="row g-0">
 					<div className="col-lg-4">
 						<div className="choose-wrap divider-one img p-5 d-flex align-items-end" style={{backgroundImage: `url('assets/choose-1.jpg')`}}>

@@ -15,9 +15,9 @@ const Navbar = () => {
           <nav className="navbar navbar-expand-lg navbar-light main_box">
             <div className="container">
 
-              <a className="navbar-brand logo_h" href="index.html">
+              <Link className="navbar-brand logo_h" to='/'>
                 <img src="https://t4.ftcdn.net/jpg/04/60/99/63/360_F_460996349_bIzl423o41oLdi5hJIgNT3OD8SViuo9i.jpg" alt="logo" style={{ height: "80px" }} />
-              </a>
+              </Link>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="icon-bar"></span>
@@ -27,22 +27,20 @@ const Navbar = () => {
 
               <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
                 <ul className="nav navbar-nav menu_nav ms-auto ">
-                  <li className="nav-item active"><a className="nav-link" href="index.html">Home</a></li>
-                  <li className="nav-item "><a className="nav-link" href="index.html">About</a></li>
+                  <li className="nav-item active"><Link className="nav-link" to="/">Home</Link></li>
+                  <li className="nav-item "><Link className="nav-link" to="/about">About</Link></li>
 
                   <li className="nav-item submenu dropdown">
-                    <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                      aria-expanded="false">Shop</a>
+                    <Link to="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Shoes</Link>
                     <ul className="dropdown-menu">
-                      <li className="nav-item"><a className="nav-link" href="category.html">Shoes</a></li>
-                      <li className="nav-item"><a className="nav-link" href="single-product.html">Sneakers</a></li>
-                      <li className="nav-item"><a className="nav-link" href="checkout.html">Running</a></li>
-                      <li className="nav-item"><a className="nav-link" href="cart.html">Converse</a></li>
-                      <li className="nav-item"><a className="nav-link" href="confirmation.html">Sports Shoes</a></li>
+                      <li className="nav-item"><Link className="nav-link" to="/mens">Mens</Link></li>
+                      <li className="nav-item"><Link className="nav-link" to="/womens">Womens</Link></li>
+                      <li className="nav-item"><Link className="nav-link" to="/kids">Kids</Link></li>
                     </ul>
                   </li>
 
-                  <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
+                  <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
                 <li className="nav-item">
@@ -51,7 +49,7 @@ const Navbar = () => {
                   <li className="nav-item">
                     <button className="search"><span className="lnr lnr-magnifier" id="search"><FaShoppingBag /></span></button>
                   </li>
-                  <li className="nav-item"><a href="#" className="cart"><span className="ti-bag"><FiSearch /> </span></a></li>
+                  <li className="nav-item"><Link to="#" className="cart"><span className="ti-bag"><FiSearch /> </span></Link></li>
                   
                 </ul>
               </div>

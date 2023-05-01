@@ -1,7 +1,7 @@
 [
     {
         "id": 10,
-        "img": "assets/product-3.png",
+        "img": "assets/product-1.png",
         "category": "Lifestyle",
         "name": "Nike Free RN 2019 ",
         "price": "$120.00",
@@ -22,7 +22,7 @@
     },
     {
         "id": 1,
-        "img": "assets/product-3.png",
+        "img": "assets/product-6.png",
         "category": "Lifestyle",
         "name": "Nike Free RN 2019 ",
         "price": "$120.00",
@@ -37,7 +37,7 @@
     },
     {
         "id": 3,
-        "img": "assets/product-3.png",
+        "img": "assets/product-4.png",
         "category": "Lifestyle",
         "name": "Nike Free RN 2019 ",
         "price": "$120.00"

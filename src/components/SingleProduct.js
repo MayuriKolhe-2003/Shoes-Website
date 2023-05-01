@@ -4,6 +4,7 @@ import ProductDesc from './singleProcuctPageComponents/ProductDesc'
 import Banner from './Banner'
 import { useParams } from 'react-router-dom'
 import products from '../data/products.json'
+import './singleProcuctPageComponents/singleProduct.css'
 
 const SingleProduct = () => {
   let {id} = useParams();
@@ -13,7 +14,7 @@ const SingleProduct = () => {
 
   return (
     <>
-    <Banner />
+    <Banner name={SingleProduct }/>
 	  <ProductImage shoe={shoe} />
 	  <ProductDesc shoe={shoe} />
   

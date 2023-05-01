@@ -33,7 +33,7 @@ const Reviews = () => {
 								<div className="review_item">
 									<div className="media">
 										<div className="d-flex">
-											<img src="assets/review-1.png" alt=""/>
+											<img src="../../assets/review-1.png" alt=""/>
 										</div>
 										<div className="media-body">
 											<h4>Blake Ruiz</h4>
@@ -51,7 +51,7 @@ const Reviews = () => {
 								<div className="review_item">
 									<div className="media">
 										<div className="d-flex">
-											<img src="assets/review-2.png" alt=""/>
+											<img src="../../assets/review-2.png" alt=""/>
 										</div>
 										<div className="media-body">
 											<h4>Blake Ruiz</h4>
@@ -69,7 +69,7 @@ const Reviews = () => {
 								<div className="review_item">
 									<div className="media">
 										<div className="d-flex">
-											<img src="assets/review-3.png" alt=""/>
+											<img src="../../assets/review-3.png" alt=""/>
 										</div>
 										<div className="media-body">
 											<h4>Blake Ruiz</h4>

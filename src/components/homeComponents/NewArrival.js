@@ -13,13 +13,14 @@ const NewArrival = () => {
 		loop:true,
 		autoplay: true,
 		nav:true,
+		navText:["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
 		dots:false,
 			responsive: {
 			0: {
-				items: 1,
+				items: 2,
 			},
 			400: {
-				items: 1,
+				items: 2,
 			},
 			600: {
 				items: 2,
@@ -28,7 +29,7 @@ const NewArrival = () => {
 				items: 3,
 			},
 			1000: {
-				items: 5,
+				items: 4,
 			}
 		},
 	};
@@ -39,7 +40,7 @@ const NewArrival = () => {
 				<div className="container">
 					<div className="row justify-content-center mb-3 pb-3">
 						<div className="col-md-12 heading-section text-center ftco-animate">
-							<h2 className="mb-4">New Shoes Arrival</h2>
+							<h2 className="mb-4 fw-bold">New Shoes Arrival</h2>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
 						</div>
 					</div>

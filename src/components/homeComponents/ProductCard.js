@@ -5,7 +5,7 @@ const ProductCard = ({product}) => {
 
         <div className=" product-card d-flex" >
             <div className="product d-flex flex-column">
-        <a href={`single-product/${product.id}`} className="img-prod"><img className="img-fluid" src={product.img} alt="Colorlib Template" />
+        <a href={`single-product/${product.id}`} className="img-prod"><img className="img-fluid" src={product.img}/>
             <div className="overlay"></div>
         </a>
         <div className="text py-3 pb-4 px-3">
