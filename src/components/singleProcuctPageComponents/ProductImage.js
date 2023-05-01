@@ -13,7 +13,7 @@ const ProductImage = (props) => {
 			<div className="row s_product_inner">
 				<div className="col-lg-6">
 						<div className="single-prd-item">
-							<img className="img-fluid" src={shoe.img} alt="" style={{height:"600px",width:"500px"}}/>
+							<img className="img-fluid" src={`../../${shoe.img}`} alt="" style={{height:"600px",width:"500px"}}/>
 						</div>
 
 				</div>

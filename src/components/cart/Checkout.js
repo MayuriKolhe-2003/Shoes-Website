@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from '../Banner'
+import { Link } from 'react-router-dom'
 
 const Checkout = () => {
     return (
@@ -141,7 +142,7 @@ const Checkout = () => {
                                             </div>
                                         </div>
                                         <p className='cart-wrap'>
-                                        <a href="#" class=" btn btn-primary py-3 px-4">Place an order</a>
+                                        <Link to="/confirmation" class=" btn btn-primary py-3 px-4">Place an order</Link>
                                         </p>
                                     </div>
                                 </div>

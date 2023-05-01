@@ -14,7 +14,7 @@ const SingleProduct = () => {
 
   return (
     <>
-    <Banner name={SingleProduct }/>
+    <Banner name="Single-Product" />
 	  <ProductImage shoe={shoe} />
 	  <ProductDesc shoe={shoe} />
   

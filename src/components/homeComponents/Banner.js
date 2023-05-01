@@ -18,8 +18,9 @@ const Banner = () => {
                 </div>
 
                 <div className='col-lg-7 col-md-6 order-1 order-lg-2'>
-                <div className='banner-img'>
-                <img className='img-fluid' src='assets/banner-img.png'/>
+                <div class="image">
+                    <img src="assets/home-shoe-1.png" class="shoe" alt=""/>
+                    <img src="assets/just.png" class="text" alt=""/>
                 </div>
                 </div>
 
