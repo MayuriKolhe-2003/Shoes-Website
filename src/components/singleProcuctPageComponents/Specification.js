@@ -3,7 +3,7 @@ import React from 'react'
 const Specification = () => {
   return (
     <>
-    	<div className="tab-pane fade" id="specfication" role="tabpanel" aria-labelledby="sepec-tab">
+    	<div  id="specfication" >
 					<div className="table-responsive">
 						<table className="table">
 							<tbody>

@@ -8,9 +8,9 @@ import './singleProcuctPageComponents/singleProduct.css'
 
 const SingleProduct = () => {
   let {id} = useParams();
-	console.log(id);
+	//console.log(id);
 	const shoe =  products.find(ob => ob.id == id);
-	console.log(shoe);
+	//console.log(shoe);
 
   return (
     <>

@@ -29,3 +29,11 @@
     transition: 0.5s;
     background-color: rgb(219, 219, 219);
 }
+.card-bg:hover + .button, .button:hover {
+    display: inline-block;
+}
+.circle{
+    margin-top: 20px;
+    margin-left: auto;
+    font-size: 20px;
+}

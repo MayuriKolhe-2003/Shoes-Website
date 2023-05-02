@@ -3,7 +3,7 @@ import React from 'react'
 const Comments = () => {
   return (
     <>
-    <div className="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comment-tab">
+    <div  id="comments">
 					<div className="row">
 						<div className="col-lg-6">
 							<div className="comment_list">

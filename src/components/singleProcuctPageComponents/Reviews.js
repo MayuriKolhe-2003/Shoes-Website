@@ -5,7 +5,7 @@ const Reviews = () => {
   return (
    <>
    
-   <div className="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+   <div>
 					<div className="row">
 						<div className="col-lg-6">
 							<div className="row total_rate">

@@ -3,7 +3,7 @@ import React from 'react'
 const Description = () => {
   return (
    <>
-   <div className="tab-pane fade" id="description" role="tabpanel" aria-labelledby="desc-tab">
+   <div>
 	<p>
 Channel vintage vibes in every step with this hoops original. Pairing a durable canvas upper with seam overlays and vibrant leather Swoosh details, this heritage-inspired original provides a unique worn-in aesthetic with throwback style. Plus, a hidden Nike Air unit and durable '80s construction add the comfort you've come to expect from the AF-1.</p>
 <h4>Benefits</h4>
