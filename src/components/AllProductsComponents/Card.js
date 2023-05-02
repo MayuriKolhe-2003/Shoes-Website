@@ -3,8 +3,13 @@ import './AllProdstyles.css';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { BsBagHeart } from 'react-icons/bs'
 
-var itemid = null
+var itemid = []
 function Card(props) {
+
+    function changeid(){
+        itemid.push(props.id)
+        console.log(itemid);
+    }
 
     return (
 
@@ -13,7 +18,7 @@ function Card(props) {
                 <div class="card-bg">
                     <img src={props.img} class="shoe-all-imag img-fluid" alt="imag"></img>
                     <div class="all-icons d-flex justify-content-between">
-                        <i onClick={() => itemid = props.id} class="fs-4 ps-2 pb-2"><AiOutlineShoppingCart /></i>
+                        <i onClick={() => changeid()} class="fs-4 ps-2 pb-2"><AiOutlineShoppingCart /></i>
                         <i class="fs-4 pe-2"><BsBagHeart /></i>
                     </div>
 

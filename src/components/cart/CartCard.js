@@ -1,18 +1,30 @@
 import React, { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import data from '../../data/products.json'
+import { itemid } from '../AllProductsComponents/Card';
 
 export default function CartCard() {
+	var newdata = []
 
-	var currPrice = 0;
-	var subtot = 0;
-	for (var i = 0;i<data.length;i++){
-		currPrice = currPrice + data[i].salePrice;
-		subtot = subtot + data[i].price;
+	for (var i = 0;i<itemid.length;i++){
+		newdata.push(data[itemid[i]])
 	}
 
-	const [cartItms, setCartItms] = useState(data);
-	const [totalPrice,setTotalPrice] = useState(currPrice);
+	
+
+
+	const [cartItms, setCartItms] = useState(newdata);
+	console.log(cartItms);
+	var currPrice = 0;
+	var subtot = 0;
+
+	for (var i=0;i<cartItms.length;i++){
+		currPrice = currPrice + cartItms[i].salePrice
+		subtot = subtot + cartItms[i].price
+	}
+
+
+	const [totalPrice, setTotalPrice] = useState(currPrice);
 	const [subPrice, setSubPrice] = useState(subtot);
 
 	function deleteitm(id, slprice, price) {
@@ -26,7 +38,7 @@ export default function CartCard() {
 		console.log(totalPrice);
 	}
 
-	
+
 
 	return (
 		<div>
@@ -54,7 +66,7 @@ export default function CartCard() {
 												return (
 													<tbody>
 														<tr class="text-center">
-															<td class="product-remove"><div onClick={() => deleteitm(prod.id,prod.salePrice,prod.price)}><span class="ion-ios-close"><AiOutlineClose /></span></div></td>
+															<td class="product-remove"><div onClick={() => deleteitm(prod.id, prod.salePrice, prod.price)}><span class="ion-ios-close"><AiOutlineClose /></span></div></td>
 
 															<td class="image-prod"><div class="img" style={{ backgroundImage: `url(assets/product-8.png)` }}></div></td>
 
