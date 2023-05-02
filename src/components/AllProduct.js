@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import data from '../data/products.json';
-import Card from './AllProductsComponents/Card';
+import {Card} from './AllProductsComponents/Card';
+import { itemid } from './AllProductsComponents/Card';
 
 export default function AllProduct() {
+    
     const [Malecheck, isMale] = useState(false);
     const [Femalecheck, isFemale] = useState(false);
     const [cards,changeCards] = useState(data);
@@ -10,11 +12,11 @@ export default function AllProduct() {
 
     function malechange() {
         isMale(document.getElementById('male').checked);
-
+        console.log(itemid);
         !Malecheck ?
         changeCards(cards.filter((obj) => {
             return (
-                obj.type == 'male'
+                obj.type === 'male'
             )
         }))
         : changeCards(allprods)
@@ -27,7 +29,7 @@ export default function AllProduct() {
         !Femalecheck ?
         changeCards(cards.filter((obj) => {
             return (
-                obj.type == 'female'
+                obj.type === 'female'
             )
         }))
         : changeCards(allprods)

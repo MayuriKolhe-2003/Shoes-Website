@@ -2,23 +2,34 @@ import React, { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import data from '../../data/products.json'
 
-const CartCard = () => {
+export default function CartCard() {
 
-	const [cartItm, setCartItm] = useState(data);
+	var currPrice = 0;
+	var subtot = 0;
+	for (var i = 0;i<data.length;i++){
+		currPrice = currPrice + data[i].salePrice;
+		subtot = subtot + data[i].price;
+	}
 
-	function removeitem(id) {
-		setCartItm(cartItm.filter((obj) => {
+	const [cartItms, setCartItms] = useState(data);
+	const [totalPrice,setTotalPrice] = useState(currPrice);
+	const [subPrice, setSubPrice] = useState(subtot);
+
+	function deleteitm(id, slprice, price) {
+		setCartItms(cartItms.filter((obj) => {
 			return (
 				obj.id !== id
 			)
 		}))
+		setTotalPrice(totalPrice - slprice)
+		setSubPrice(subPrice - price)
+		console.log(totalPrice);
 	}
-	// removeitem(0);
-	console.log(cartItm);
 
+	
 
 	return (
-		<>
+		<div>
 			<section class="cart mt-5">
 				<div class="container">
 					<div class="row">
@@ -35,35 +46,38 @@ const CartCard = () => {
 											<th>Total</th>
 										</tr>
 									</thead>
-									<tbody>
-										{cartItm.map((prod) => {
-											return (
 
-												<tr class="text-center">
-													<td class="product-remove"><div><span class="ion-ios-close"><AiOutlineClose /></span></div></td>
-													{/* <td class="product-remove"><div><span class="ion-ios-close"><AiOutlineClose /></span></div></td> */}
+									{
+										cartItms.length === 0 ?
+											<h2 class="text-muted pt-3">Cart is empty</h2> :
+											cartItms.map((prod) => {
+												return (
+													<tbody>
+														<tr class="text-center">
+															<td class="product-remove"><div onClick={() => deleteitm(prod.id,prod.salePrice,prod.price)}><span class="ion-ios-close"><AiOutlineClose /></span></div></td>
 
-													<td class="image-prod"><div class="img" style={{ backgroundImage: `url(assets/product-8.png)` }}></div></td>
+															<td class="image-prod"><div class="img" style={{ backgroundImage: `url(assets/product-8.png)` }}></div></td>
 
-													<td class="product-name">
-														<h3>{prod.name}</h3>
-														<p>Far far away, behind the word mountains, far from the countries</p>
-													</td>
+															<td class="product-name">
+																<h3>{prod.name}</h3>
+																<p>Far far away, behind the word mountains, far from the countries</p>
+															</td>
 
-													<td class="price">{prod.salePrice}</td>
+															<td class="price">${prod.price}</td>
 
-													<td class="quantity">
-														<div class="input-group mb-3">
-															<input type="number" name="quantity" class="quantity form-control input-number" value='1' min="1" max="100" />
-														</div>
-													</td>
+															<td class="quantity">
+																<div class="input-group mb-3">
+																	<input type="number" name="quantity" class="quantity form-control input-number" value='1' min="1" max="100" />
+																</div>
+															</td>
 
-													<td class="total">{prod.salePrice}</td>
-												</tr>
-											)
-										})
-										}
-									</tbody>
+															<td class="total">${prod.price}</td>
+														</tr>
+													</tbody>
+												)
+											})
+									}
+
 								</table>
 							</div>
 						</div>
@@ -74,20 +88,16 @@ const CartCard = () => {
 								<h3>Cart Totals</h3>
 								<p class="d-flex">
 									<span>Subtotal</span>
-									<span>$20.60</span>
-								</p>
-								<p class="d-flex">
-									<span>Delivery</span>
-									<span>$0.00</span>
+									<span>${subPrice}</span>
 								</p>
 								<p class="d-flex">
 									<span>Discount</span>
-									<span>$3.00</span>
+									<span>${subPrice - totalPrice}</span>
 								</p>
 								<hr />
 								<p class="d-flex total-price">
 									<span>Total</span>
-									<span>$17.60</span>
+									<span>${totalPrice}</span>
 								</p>
 
 							</div>
@@ -97,8 +107,6 @@ const CartCard = () => {
 				</div>
 			</section>
 
-		</>
+		</div>
 	)
 }
-
-export default CartCard
