@@ -4,8 +4,8 @@ const Confirmation = () => {
 	return (
 		<>
 			<section class="order_details mt-5">
-				<div class="container">
-					<h3 class="title_confirmation">Thank you. Your order has been received.</h3>
+				<div class="container mt-5">
+					<h3 class="title_confirmation p-5">Thank you. Your order has been received.</h3>
 					<div class="row order_d_inner">
 						<div class="col-lg-4">
 							<div class="details_item">

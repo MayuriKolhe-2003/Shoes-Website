@@ -24,7 +24,7 @@ const CartCard = () => {
 						      <tr class="text-center">
 						        <td class="product-remove"><a href="#"><span class="ion-ios-close"><AiOutlineClose /></span></a></td>
 						        
-						        <td class="image-prod"><div class="img" style={{backgroundImage:`url(assets/product-8.png)`}}></div></td>
+						        <td class="image-prod"><div class="img" style={{backgroundImage:`url(http://localhost:3000/assets/product-1.png)`}}></div></td>
 						        
 						        <td class="product-name">
 						        	<h3>Nike Free RN 2019 iD</h3>

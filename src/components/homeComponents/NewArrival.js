@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import products from '../../data/products.json'
 import { AiOutlineStar } from 'react-icons/ai'
 import OwlCarousel from 'react-owl-carousel';
@@ -58,6 +58,7 @@ const NewArrival = () => {
 					</div>
 				</div>
 			</section>
+
 
 		</>
 	)
