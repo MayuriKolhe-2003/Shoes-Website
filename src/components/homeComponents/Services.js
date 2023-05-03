@@ -9,8 +9,8 @@ const Services = () => {
     <>
     <section className=''>
     <div className="container">
-				<div className="row no-gutters ftco-services">
-          <div className="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+				<div className="row no-gutters ftco-services" data-aos="fade-up" data-aos-duration="1000">
+          <div className="col-lg-4 text-center d-flex align-self-stretch" >
             <div className="media block-6 services p-4 py-md-5">
               <div className="icon d-flex justify-content-center align-items-center mb-4">
             		<span className="flaticon-bag"><BsFillBagCheckFill/></span>
@@ -21,7 +21,7 @@ const Services = () => {
               </div>
             </div>      
           </div>
-          <div className="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+          <div className="col-lg-4 text-center d-flex align-self-stretch" >
             <div className="media block-6 services p-4 py-md-5">
               <div className="icon d-flex justify-content-center align-items-center mb-4">
             		<span className="flaticon-customer-service"><MdSupportAgent /></span>
@@ -32,7 +32,7 @@ const Services = () => {
               </div>
             </div>    
           </div>
-          <div className="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+          <div className="col-lg-4 text-center d-flex align-self-stretch">
             <div className="media block-6 services p-4 py-md-5">
               <div className="icon d-flex justify-content-center align-items-center mb-4">
             		<span className="flaticon-payment-security"><RiSecurePaymentLine /></span>

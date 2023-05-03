@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Deal = () => {
   return (
     <>
-    <section className=" deal ">
+    <section className=" deal " data-aos="zoom-in" data-aos-duration="1800">
     	<div className="w-100">
 				<div className="row g-0">
 					<div className="col-lg-4">
