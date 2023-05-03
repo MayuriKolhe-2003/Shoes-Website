@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Deal = () => {
   return (
@@ -13,7 +14,7 @@ const Deal = () => {
 								<span className="subheading">Men's Shoes</span>
     						<h2>Men's Collection</h2>
     						<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-    						<p><a href="#" className="btn btn-black px-3 py-2">Shop now</a></p>
+    						<p><Link to="/mens" className="btn btn-black px-3 py-2">Shop now</Link></p>
     					</div>
     				</div>
 					</div>
@@ -26,7 +27,7 @@ const Deal = () => {
 	    								<span className="subheading">Women's Shoes</span>
 			    						<h2>Women's Collection</h2>
 			    						<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-			    						<p><a href="#" className="btn btn-black px-3 py-2">Shop now</a></p>
+			    						<p><Link to="/womens" className="btn btn-black px-3 py-2">Shop now</Link></p>
 			    					</div>
 	    						</div>
 	    					</div>
@@ -39,7 +40,7 @@ const Deal = () => {
 		    								<span className="subheading">Summer Sale</span>
 				    						<h2>Extra 50% Off</h2>
 				    						<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-				    						<p><a href="#" className="btn btn-black px-3 py-2">Shop now</a></p>
+				    						<p><Link to="/sale" className="btn btn-black px-3 py-2">Shop now</Link></p>
 				    					</div>
 		    						</div>
 	    						</div>
@@ -49,7 +50,7 @@ const Deal = () => {
 		    								<span className="subheading">Shoes</span>
 				    						<h2>Best Sellers</h2>
 				    						<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-				    						<p><a href="#" className="btn btn-black px-3 py-2">Shop now</a></p>
+				    						<p><Link to="/best-deals" className="btn btn-black px-3 py-2">Shop now</Link></p>
 				    					</div>
 		    						</div>
 	    						</div>

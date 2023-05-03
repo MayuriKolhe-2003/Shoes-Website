@@ -18,10 +18,10 @@ const Navbar = () => {
           <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
             <ul class="navbar-nav w-100 justify-content-center ms-auto">
               <li class="nav-item active">
-                <Link class="nav-link" to="/all-product">Mens</Link>
+                <Link class="nav-link" to="/mens">Mens</Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" to="/all-product">Womens</Link>
+                <Link class="nav-link" to="/womens">Womens</Link>
               </li>
               <li class="nav-item">
                 <Link class="nav-link" to="/all-product">Kids</Link>

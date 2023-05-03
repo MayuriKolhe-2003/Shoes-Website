@@ -2,8 +2,20 @@ import React from 'react';
 import './AllProdstyles.css';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { BsBagHeart } from 'react-icons/bs'
-export default function Card(props) {
 
+var wishListItems = [];
+var itemid = [];
+
+ function Card(props) {
+    function changeid(){
+        itemid.push(props.id)
+        console.log(itemid);
+    }
+
+    const AddToWishlist = () =>{
+        wishListItems.push(props.id);
+        console.log(wishListItems);
+    }
 
     return (
 
@@ -12,8 +24,8 @@ export default function Card(props) {
                 <div class="card-bg">
                     <img src={props.img} class="shoe-all-imag img-fluid" ></img>
                     <div class="all-icons d-flex justify-content-between">
-                        <i class="fs-4 ps-2 pb-2"><AiOutlineShoppingCart /></i>
-                        <i class="fs-4 pe-2"><BsBagHeart /></i>
+                        <i class="fs-4 ps-2 pb-2" onClick={() => changeid()}><AiOutlineShoppingCart /></i>
+                        <i class="fs-4 pe-2" onClick={()=>{AddToWishlist()}}><BsBagHeart /></i>
                     </div>
 
                 </div>
@@ -30,3 +42,5 @@ export default function Card(props) {
         </div>
     );
 }
+
+export{Card,wishListItems,itemid};

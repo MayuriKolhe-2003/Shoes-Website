@@ -24,6 +24,8 @@ function App() {
             <Route path="/checkout" element={<Checkout />} ></Route>
             <Route path='/confirmation' element={<Confirmation />}></Route>
             <Route path='/all-product' element={<AllProduct />}></Route>
+            <Route path='/mens' element={<AllProduct />}></Route>
+            <Route path='/womens' element={<AllProduct />}></Route>
             <Route path='/wishlist' element={<Wishlist />}></Route>
             </Routes>
           

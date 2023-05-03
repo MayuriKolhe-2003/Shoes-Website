@@ -1,12 +1,14 @@
 import React from 'react'
 import {AiFillCloseCircle} from 'react-icons/ai'
 
+
 const WishlistCard = (props) => {
+    
     return (
         <div class="card shadow-sm border border-0">
             <div class="main-shoe container card-body">
                 <div class="card-bg text-center wishlist-card">
-                    <AiFillCloseCircle className='circle' />
+                    <AiFillCloseCircle className='circle' onClick={props.deleteFromWishList(props.id)}/>
                     <img src={props.img} class="shoe-all-imag img-fluid" />
                     <button className='bg-dark text-light p-2'>Move To Bag</button>
                 </div>

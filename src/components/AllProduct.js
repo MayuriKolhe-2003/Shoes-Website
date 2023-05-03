@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import data from '../data/products.json';
-import Card from './AllProductsComponents/Card';
+import {Card} from './AllProductsComponents/Card';
 
 export default function AllProduct() {
     const [Malecheck, isMale] = useState(false);
@@ -81,7 +81,7 @@ export default function AllProduct() {
                             cards.map((obj) => {
                                 return (
                                     <div class="container mt-4 col-6 col-md-3">
-                                        <Card name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" onSale={obj.onSale} salePrice={obj.salePrice} type={obj.type}/>
+                                        <Card key={obj.id} id={obj.id} name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" onSale={obj.onSale} salePrice={obj.salePrice} type={obj.type}/>
                                     </div>
                                 )
                             })

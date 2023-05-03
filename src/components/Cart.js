@@ -7,7 +7,7 @@ const Cart = () => {
   return (
    <>
    <Banner name="My-Cart" />
-    <CartCard />
+  <CartCard />
    </> 
   )
 }
