@@ -43,17 +43,19 @@
   .s_product_text h3 {
     font-size: 24px;
     font-weight: bold;
-    color: #222222;
+    color: var(--dark-blue);
     margin-bottom: 10px;
   }
   
-  .s_product_text h2 {
+  .s_product_text h2 ,
+  .s_product_text h2 svg{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
-    background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+    background: linear-gradient(90deg, #f53f6f 0%, var(--red) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: var(--red);
   }
   
   .s_product_text .list li {
@@ -66,20 +68,7 @@
     font-weight: normal;
     color: #555555;
   }
-  
-  .s_product_text .list li a span {
-    width: 90px;
-    display: inline-block;
-  }
-  
-  .s_product_text .list li a span:hover {
-    color: #555;
-  }
-  
-  .s_product_text .list li a.active span {
-    color: #555;
-    -webkit-text-fill-color: #555;
-  }
+
   
   .s_product_text .list li:last-child {
     margin-bottom: 0px;
@@ -106,7 +95,7 @@
     width: 40px;
     line-height: 40px;
     text-align: center;
-    background: #828bb2;
+    background: var(--blue);
     border-radius: 50%;
     display: inline-block;
     color: #fff;
@@ -215,7 +204,7 @@
   .product_description_area .nav-tabs li button.active {
     color: #fff;
     border: 1px solid transparent;
-    background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+    background: linear-gradient(90deg, #ee527c 0%, var(--red) 100%);
   }
   
   .product_description_area .tab-content {
@@ -235,7 +224,7 @@
   .product_description_area .tab-content .total_rate .box_total h4 {
     font-size: 48px;
     font-weight: bold;
-    background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+    background: linear-gradient(90deg, #f53f6f 0%, var(--red) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -265,19 +254,7 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
-  .product_description_area .tab-content .total_rate .rating_list .list li a {
-    font-size: 14px;
-    color: #777777;
-  }
-  
-  .product_description_area .tab-content .total_rate .rating_list .list li a i {
-    color: #fbd600;
-  }
-  
-  .product_description_area .tab-content .total_rate .rating_list .list li:nth-child a i:last-child {
-    color: #eeeeee;
-  }
+
   
   .product_description_area .tab-content .table {
     margin-bottom: 0px;
@@ -328,14 +305,14 @@
   .review_item .media .media-body h4 {
     margin-bottom: 0px;
     font-size: 14px;
-    color: #222222;
+    color: var(--red);
     font-family: "Roboto", sans-serif;
     margin-bottom: 8px;
     font-weight: bold;
   }
   
   .review_item .media .media-body i {
-    color: #fbd600;
+    color: var(--red);
   }
   
   .review_item .media .media-body h5 {
@@ -356,12 +333,12 @@
     position: absolute;
     right: 0px;
     top: 14px;
-    @icnlude transition;
+    @include transition;
   }
   
   .review_item .media .media-body .reply_btn:hover {
-    background: #ffba00;
-    border-color: #ffba00;
+    background: var(--red);
+    border-color: var(--red);
     color: #fff;
   }
   
@@ -376,7 +353,7 @@
   
   .review_box h4 {
     font-size: 24px;
-    color: #222222;
+    color: var(--dark-blue);
     margin-bottom: 20px;
   }
   
@@ -397,7 +374,7 @@
   
   .review_box .list li a {
     display: inline-block;
-    color: #fbd600;
+    color: var(--red);
   }
   
   .review_box .contact_form {
@@ -433,26 +410,13 @@
   
   .contact_form .form-group .form-control:focus {
     box-shadow: none;
-    outline: none;
+    outline: var(--red);
   }
   
   .contact_form .form-group .form-control.placeholder {
     color: #999;
   }
-  
-  .contact_form .form-group .form-control:-moz-placeholder {
-    color: #999;
-  }
-  
-  .contact_form .form-group .form-control::-moz-placeholder {
-    color: #999;
-  }
-  
-  .contact_form .form-group .form-control::-webkit-input-placeholder {
-    color: #999;
-  }
-  
-  .contact_form .form-group textarea {
+.contact_form .form-group textarea {
     resize: none;
   }
   
@@ -461,7 +425,7 @@
   }
   
   .contact_form .primary-btn {
-    background: #ffba00;
+    background:var(--red);
     color: #fff;
     margin-top: 20px;
     border: none;

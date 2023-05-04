@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AllProdstyles.css';
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { BsBagHeart } from 'react-icons/bs'
@@ -7,9 +7,13 @@ var wishListItems = [];
 var itemid = [];
 
  function Card(props) {
+    let isWish = false;
+    const [style,setstyle] = useState({color:'black'});
     function changeid(){
-        itemid.push(props.id)
-        console.log(itemid);
+        
+            itemid.push(props.id)
+            console.log(itemid);
+        
     }
 
     const AddToWishlist = () =>{
@@ -24,8 +28,9 @@ var itemid = [];
                 <div class="card-bg">
                     <img src={props.img} class="shoe-all-imag img-fluid" ></img>
                     <div class="all-icons d-flex justify-content-between">
-                        <i class="fs-4 ps-2 pb-2" onClick={() => changeid()}><AiOutlineShoppingCart /></i>
-                        <i class="fs-4 pe-2" onClick={()=>{AddToWishlist()}}><BsBagHeart /></i>
+                        <i class="fs-4 ps-2 pb-2"  onClick={() => changeid()}><AiOutlineShoppingCart /></i> 
+                        
+                        <i class="fs-4 pe-2"onClick={()=>{AddToWishlist()}}><BsBagHeart /></i>
                     </div>
 
                 </div>

@@ -16,16 +16,13 @@ const ProductDesc = (props) => {
 					{/* NAV TABS SECTION*/}
 					<Tabs defaultActiveKey="first">
 						<Tab eventKey="first" title="Description">
-							<Description />
+							<Description shoe={shoe} />
 						</Tab>
 						<Tab eventKey="second" title="Specification">
-							<Specification />
+							<Specification shoe={shoe}/>
 						</Tab>
 						<Tab eventKey="third" title="Reviews">
-							<Reviews />
-						</Tab>
-						<Tab eventKey="fourth" title="Comments">
-							<Comments />
+							<Reviews shoe={shoe}/>
 						</Tab>
 					</Tabs>
 

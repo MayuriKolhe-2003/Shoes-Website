@@ -79,10 +79,10 @@ const Footer = () => {
                                     className="mb-4 mt-0 d-inline-block mx-auto"
                                     style={{ width: "60px", backgroundColor: " #7c4dff", height: "2px" }}
                                 />
-                                <p><AiFillHome /> New York, NY 10012, US</p>
-                                <p><FaEnvelope /> info@example.com</p>
-                                <p><AiFillPhone /> + 01 234 567 88</p>
-                                <p><AiFillPhone /> + 01 234 567 89</p>
+                                <p><AiFillHome /> PICT, PUNE 411013, India</p>
+                                <p><FaEnvelope /> abc@xyz.com</p>
+                                <p><AiFillPhone /> +91 1234567890</p>
+                                <p><AiFillPhone /> +91 1234567890</p>
                             </div>
 
                         </div>
