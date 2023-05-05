@@ -38,6 +38,7 @@ const Wishlist = () => {
         <div className='container mt-5 pt-5'>
              <div class="col col-md-12">
                     <div class="row mx-2">
+                    <h1 class="text-center">Wishlisted Products</h1>
                         {
                             wishListProducts.length == 0 ?
                             <h2 className='p-4 text-muted'>WishList is empty !</h2>
