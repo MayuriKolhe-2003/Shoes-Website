@@ -50,7 +50,7 @@ export default function AllProduct() {
 
             <div className="row">
 
-                {/* -------------------- FILTER ---------------------------- */}
+                {/* -------------------------------- FILTER -------------------------------------- */}
 
                 <div className="d-none d-md-inline col-md-2">
                     <form className="container mt-3 ms-3">
@@ -80,7 +80,7 @@ export default function AllProduct() {
                     </form>
                 </div>
 
-                {/* -------------------- Cards ---------------------------- */}
+                {/* -------------------------------- Cards ------------------------------------------ */}
 
                 <div className="col col-md-9">
                     <div className='d-flex align-items-center justify-content-between'>

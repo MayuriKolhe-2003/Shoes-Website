@@ -4,9 +4,12 @@ import data from '../../data/products.json'
 import { itemid } from '../AllProductsComponents/Card';
 
 export default function CartCard() {
+
+	// ----------------------------- Dynamic Cart Functionality -------------------------------------------
+
 	var newdata = []
 
-	for (var i = 0;i<itemid.length;i++){
+	for (var i = 0; i < itemid.length; i++) {
 		newdata.push(data[itemid[i]])
 	}
 
@@ -15,27 +18,29 @@ export default function CartCard() {
 	var currPrice = 0;
 	var subtot = 0;
 
-	for (var i=0;i<cartItms.length;i++){
+	for (var i = 0; i < cartItms.length; i++) {
 		currPrice = currPrice + cartItms[i].salePrice
 		subtot = subtot + cartItms[i].price
 	}
 
+	//------------------------------------ Price Functionality -----------------------------------------
 
 	const [totalPrice, setTotalPrice] = useState(currPrice);
 	const [subPrice, setSubPrice] = useState(subtot);
 
+	//------------------------------------ Delete Functionality -----------------------------------------
+
 	function deleteitm(id, slprice, price) {
-		for( var i = 0; i < itemid.length; i++){ 
-            if ( itemid[i] === id) { 
-                itemid.splice(i, 1); 
-            }
-        }
-        newdata = [];
-        for(var i=0;i<itemid.length;i++)
-        {
-            newdata.push(data[itemid[i]]);
-        }
-        setCartItms(newdata);
+		for (var i = 0; i < itemid.length; i++) {
+			if (itemid[i] === id) {
+				itemid.splice(i, 1);
+			}
+		}
+		newdata = [];
+		for (var i = 0; i < itemid.length; i++) {
+			newdata.push(data[itemid[i]]);
+		}
+		setCartItms(newdata);
 		setTotalPrice(totalPrice - slprice)
 		setSubPrice(subPrice - price)
 		console.log(totalPrice);
@@ -62,6 +67,8 @@ export default function CartCard() {
 										</tr>
 									</thead>
 
+
+									{/* //------------------------------------ Card Render ----------------------------------------- */}
 									{
 										cartItms.length === 0 ?
 											<tr className="text-muted p-3">Cart is empty</tr> :
@@ -75,7 +82,6 @@ export default function CartCard() {
 
 															<td className="product-name">
 																<h3>{prod.name}</h3>
-																<p>Far far away, behind the word mountains, far from the countries</p>
 															</td>
 
 															<td className="price"><span className='text-muted text-decoration-line-through'> ${prod.price} </span> ${prod.salePrice} </td>
@@ -97,6 +103,9 @@ export default function CartCard() {
 							</div>
 						</div>
 					</div>
+
+					{/* ----------------------- Checkout Price --------------------------------- */}
+
 					<div className="row justify-content-start">
 						<div className="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
 							<div className="cart-total mb-3">
