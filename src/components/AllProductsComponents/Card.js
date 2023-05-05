@@ -40,8 +40,8 @@ var itemid = [];
                 <h6 class="card-subtitle text-body-secondary text-muted fw-light">{props.type == 'male' ? "Men's Shoe" : "Women's Shoe"}</h6>
                 {
                     props.onSale
-                        ? <p class="card-text fw-medium mt-2">MRP : <span class="text-muted text-decoration-line-through">{props.price}</span> {props.salePrice}</p>
-                        : <p class="card-text fw-medium mt-2">MRP : {props.price}</p>
+                        ? <p class="card-text fw-medium mt-2">MRP : <span class="text-muted text-decoration-line-through">${props.price}</span> ${props.salePrice}</p>
+                        : <p class="card-text fw-medium mt-2">MRP : ${props.price}</p>
                 }
             </div>
         </div>
