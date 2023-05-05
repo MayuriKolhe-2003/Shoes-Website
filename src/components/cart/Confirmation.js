@@ -41,6 +41,9 @@ const Confirmation = () => {
 							</div>
 						</div>
 					</div>
+
+					{/* ------------------------------- Final Price --------------------------------------- */}
+					
 					<div className="row mt-5 pt-3 d-flex">
 						<div className="col-md-6 d-flex">
 							<div className="cart-detail cart-total bg-light  p-4">

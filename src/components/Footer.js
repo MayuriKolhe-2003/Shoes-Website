@@ -1,6 +1,6 @@
 import React from 'react'
-import {AiFillHome,AiFillPhone} from 'react-icons/ai'
-import {FaEnvelope} from 'react-icons/fa'
+import { AiFillHome, AiFillPhone } from 'react-icons/ai'
+import { FaEnvelope } from 'react-icons/fa'
 
 const Footer = () => {
     return (
@@ -18,6 +18,8 @@ const Footer = () => {
 
                         <div className="row mt-3 p-5">
 
+                            {/* ---------------------------- Company Div ------------------------------- */}
+
                             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
                                 <h6 className="text-uppercase fw-bold">Shoe Company</h6>
@@ -26,9 +28,11 @@ const Footer = () => {
                                     style={{ width: " 60px", backgroundColor: "#7c4dff", height: "2px" }}
                                 />
                                 <p>
-                                We are a shoe company committed to creating stylish and comfortable footwear that meets the needs of our customers.
+                                    We are a shoe company committed to creating stylish and comfortable footwear that meets the needs of our customers.
                                 </p>
                             </div>
+
+                            {/* ---------------------------- Products Div------------------------------- */}
 
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
@@ -51,6 +55,8 @@ const Footer = () => {
                                 </p>
                             </div>
 
+                            {/* ---------------------------- Useful Links Div------------------------------- */}
+
                             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
                                 <h6 className="text-uppercase fw-bold">Useful links</h6>
@@ -72,6 +78,8 @@ const Footer = () => {
                                 </p>
                             </div>
 
+                            {/* ---------------------------- Contacts Div------------------------------- */}
+
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                                 <h6 className="text-uppercase fw-bold">Contact</h6>
@@ -91,6 +99,7 @@ const Footer = () => {
                 </section>
 
 
+                {/* ---------------------------- Copyrights ------------------------------- */}
 
                 <div className="text-center fw-light  p-3">
                     © 2023 Copyright : abcd.com
