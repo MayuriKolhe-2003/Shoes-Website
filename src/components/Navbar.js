@@ -1,28 +1,35 @@
-import React, { useRef, useState } from 'react'
 import { Link } from "react-router-dom"
-import { FiSearch } from "react-icons/fi"
 import { FaShoppingBag } from "react-icons/fa"
-import { AiOutlineHeart,AiFillCloseCircle } from "react-icons/ai"
+import { AiOutlineHeart } from "react-icons/ai"
+import { GiHamburgerMenu } from "react-icons/gi"
 
 
 const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-light sticky-top bg-light">
         <div className="container">
-          <Link className="navbar-brand " to="/"><img style={{width:"100px",height:"65px"}} src="logo1.jpg" alt="logo" /></Link>
+
+          {/* --------------------------- Brand Logo ---------------------------------------- */}
+
+          <Link className="navbar-brand " to="/"><img style={{ width: "90px", height: "65px" }} src="logo1.jpg" alt="logo" /></Link>
+
+          {/* ----------------------------- Hamburger Menu ------------------------------------- */}
           <button className="btn btn-danger navbar-toggler border-3 px-2" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
           >
-            <AiFillCloseCircle />
+            <GiHamburgerMenu />
           </button>
           <div className="offcanvas offcanvas-start-lg bg-light" tabIndex="-1" id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel"
           >
             <div className="offcanvas-header d-flex d-lg-none">
+
+              {/* ------------------------------- Hamburger TItle ----------------- */}
+
               <h5 className="offcanvas-title " id="offcanvasExampleLabel">MyShoes Website</h5>
-              <a 
+              <a
                 className="text-reset p-0"
                 data-bs-dismiss="offcanvas"
                 aria-label="close"
@@ -39,26 +46,33 @@ const Navbar = () => {
                 </svg>
               </a>
             </div>
+
+            {/* ------------------------------- Navbar Sections --------------------------- */}
+
             <div className="offcanvas-body p-lg-0 text-center">
-            <ul className="navbar-nav w-100 justify-content-center ms-auto ">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/mens">Mens</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/womens">Womens</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/all-product">Sale</Link>
-              </li>
-            </ul>
-            <ul className="nav navbar-nav ms-auto w-25 justify-content-end">
-              <li className="nav-item i">
-                <Link to="/wishlist" className="search"><AiOutlineHeart /></Link>
-              </li>
-              <li className="nav-item i">
-                <Link to="/cart" className="search"><FaShoppingBag /></Link>
-              </li>
-            </ul>
+              <ul className="navbar-nav w-100 justify-content-center ms-auto ">
+                <li className="nav-item active">
+                  <Link className="nav-link" to="/mens">Mens</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/womens">Womens</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/all-product">Sale</Link>
+                </li>
+              </ul>
+              <ul className="nav navbar-nav ms-auto w-25 justify-content-end">
+
+                {/* ------------------------------- Wishlist ----------------- */}
+                <li className="nav-item i">
+                  <Link to="/wishlist" className="search"><AiOutlineHeart /></Link>
+                </li>
+
+                {/* ------------------------------- Cart ----------------- */}
+                <li className="nav-item i">
+                  <Link to="/cart" className="search"><FaShoppingBag /></Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

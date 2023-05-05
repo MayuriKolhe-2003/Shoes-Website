@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import React, { useState } from 'react'
 import products from '../../data/products.json'
 import { AiOutlineStar } from 'react-icons/ai'
 import OwlCarousel from 'react-owl-carousel';
@@ -7,15 +7,15 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ProductCard from './ProductCard';
 
 const NewArrival = () => {
-
+	//owl carousel options 
 	const options = {
 		margin: 30,
-		loop:true,
+		loop: true,
 		autoplay: true,
-		nav:true,
-		navText:["<div className='nav-button owl-prev'>‹</div>", "<div className='nav-button owl-next'>›</div>"],
-		dots:false,
-			responsive: {
+		nav: true,
+		navText: ["<div className='nav-button owl-prev'>‹</div>", "<div className='nav-button owl-next'>›</div>"],
+		dots: false,
+		responsive: {
 			0: {
 				items: 2,
 			},
@@ -33,7 +33,6 @@ const NewArrival = () => {
 			}
 		},
 	};
-	//const shoes = products.shoes;
 	return (
 		<>
 			<section className='section bg-light'>
@@ -47,9 +46,10 @@ const NewArrival = () => {
 				</div>
 				<div className="container">
 					<div className="row">
+						{/* rendering owl carousel */}
 						<OwlCarousel className="owl-carousel owl-theme" {...options}>
 							{products.map(obj => {
-								return(
+								return (
 									<ProductCard key={obj.id} product={obj} />
 								)
 							})}

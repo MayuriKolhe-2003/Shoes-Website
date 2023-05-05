@@ -8,7 +8,7 @@
   color: var(--red);
 }
 svg{
-  color: var(--blue);
+  color: #454545;
 }
 svg:hover{
   color: var(--red);
@@ -185,15 +185,24 @@ a {
   position: relative;
   text-decoration: none;
 }
-.navbar-nav li a:hover::after,
-.navbar-nav li a.active{
-  content: "";
+.navbar-nav li a:after {
+  content: '';
   position: absolute;
-  left: 15%;
-  right: 15%;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
   bottom: 0;
-  border: 1.3px solid black;
+  left: 0;
+  background-color:gray;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
+
+.navbar-nav li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .navbar-brand{
   width: 100px;
   height: 70px;

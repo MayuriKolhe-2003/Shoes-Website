@@ -3,12 +3,12 @@ import './AllProdstyles.css';
 import { BsFillCartPlusFill,BsFillBagPlusFill ,BsFillCartCheckFill,BsFillBagCheckFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 var wishListItems = [];
 var itemid = [];
 
- function Card(props) {
+function Card(props) {
     const [inCart, setInCart] = useState(<BsFillCartPlusFill />);
     const [inWish, setInWish] = useState(<BsFillBagPlusFill />);
 
@@ -23,6 +23,8 @@ var itemid = [];
         });
     };
     let isWish = false;
+
+    //---------------Add product to cart list----------------
     function changeid(){
             notifyCart();
             itemid.push(props.id);
@@ -31,6 +33,7 @@ var itemid = [];
         
     }
 
+    //---------------Add product to wishlist list----------------
     const AddToWishlist = () =>{
         notifyWish();
         wishListItems.push(props.id);
@@ -46,12 +49,12 @@ var itemid = [];
             
                 <div className="card-bg">
                     <img src={props.img} className="shoe-all-imag img-fluid" ></img>
-                    <div class="all-icons d-flex justify-content-between">
-                        <i class="fs-4 ms-2 pb-2"  onClick={() => changeid()}>{inCart}</i> 
-                        <i class="fs-4 me-2"onClick={()=>{AddToWishlist()}}>{inWish}</i>
+                    <div className="all-icons d-flex justify-content-between">
+                        <i className="fs-4 ms-2 pb-2"  onClick={() => changeid()}>{inCart}</i> 
+                        <i className="fs-4 me-2"onClick={()=>{AddToWishlist()}}>{inWish}</i>
                         
                     </div>
-                    <ToastContainer />
+                    
 
 
                 </div>
@@ -62,10 +65,10 @@ var itemid = [];
                 {
                     props.onSale
                         ? <p className="card-text fw-medium mt-2">MRP : <span className="text-muted text-decoration-line-through">${props.price}</span> ${props.salePrice}
-                        <Link to={`single-product/${props.id}`}><span className='text-muted ms-3'>See More</span></Link>
+                        <Link to={`single-product/${props.id}`}><span className=' text-muted ms-3'>See More...</span></Link>
                         </p>
                         : <p className="card-text fw-medium mt-2">MRP : ${props.price}
-                         <Link to={`single-product/${props.id}`}><span className='text-muted ms-3'>See More</span></Link>
+                         <Link to={`single-product/${props.id}`}><span className='text-muted ms-3'>See More...</span></Link>
                         </p>
                 }
                 

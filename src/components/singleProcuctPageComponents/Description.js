@@ -3,31 +3,32 @@ import React from 'react'
 
 const Description = (props) => {
 	const shoe = props.shoe;
-  return (
-   <>
-   <div>
-	<p>{shoe.description}</p>
-<h4>Benefits</h4>
-<ul list-style='circle'>
-	{shoe.benefits.map((e)=>{
-		return(
-			<li>{e}</li>
-		)
-	})}
-</ul>
+	return (
+		<>
+			<div>
+				<p>{shoe.description}</p>
+				{/* -------------- Benefits ---------------- */}
+				<h4>Benefits</h4>
+				<ul list-style='circle'>
+					{shoe.benefits.map((e) => {
+						return (
+							<li>{e}</li>
+						)
+					})}
+				</ul>
+					{/* -------------- Product Details ---------------- */}
+				<h4>Product Details</h4>
+				<ul list-style='circle'>
+					{shoe.details.map((e) => {
+						return (
+							<li>{e}</li>
+						)
+					})}
+				</ul>
 
-<h4>Product Details</h4>
-<ul  list-style='circle'>
-{shoe.details.map((e)=>{
-		return(
-			<li>{e}</li>
-		)
-	})}
-</ul>
-
-	</div>
-   </>
-  )
+			</div>
+		</>
+	)
 }
 
 export default Description

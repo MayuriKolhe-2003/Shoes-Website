@@ -4,6 +4,7 @@ import WishListcard from './AllProductsComponents/WishlistCard'
 import { wishListItems } from './AllProductsComponents/Card'
 import data from '../data/products.json';
 import { AiFillCloseCircle } from 'react-icons/ai'
+import Banner from './Banner';
 
 const Wishlist = () => {
     var wishList = [];
@@ -33,10 +34,12 @@ const Wishlist = () => {
 
 
     return (
+        <>
+        <Banner name="Wishlist Products"/>
         <div className='container mt-5 pt-5'>
             <div className="col col-md-12">
                 <div className="row mx-2">
-                    <h1 className='text-center'>Wishlist Products</h1>
+                    
                     {
                         wishListProducts.length == 0 ?
                             <h2 className='p-4 text-muted'>WishList is empty !</h2>
@@ -71,6 +74,7 @@ const Wishlist = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

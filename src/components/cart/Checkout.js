@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom'
 const Checkout = () => {
     return (
         <>
-        <Banner name="Checkout" />
+            {/* ------------------------------ Checkout Form ------------------------------------- */}
+
+            <Banner name="Checkout" />
             <section>
                 <div className="container mt-5">
                     <div className="row justify-content-center">
@@ -81,11 +83,12 @@ const Checkout = () => {
                                         </div>
                                     </div>
                                     <div className="w-100"></div>
-   
+
                                 </div>
                             </form>
 
 
+                            {/* ------------------------- Total Bill ---------------------------------- */}
 
                             <div className="row mt-5 pt-3 d-flex">
                                 <div className="col-md-6 d-flex">
@@ -142,7 +145,7 @@ const Checkout = () => {
                                             </div>
                                         </div>
                                         <p className='cart-wrap'>
-                                        <Link to="/confirmation" className=" btn btn-primary py-3 px-4">Place an order</Link>
+                                            <Link to="/confirmation" className=" btn btn-primary py-3 px-4">Place an order</Link>
                                         </p>
                                     </div>
                                 </div>

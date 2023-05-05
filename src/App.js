@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Switch } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import Navbar from "./components/Navbar";
@@ -14,8 +15,10 @@ import Confirmation from './components/cart/Confirmation';
 import Footer from './components/Footer';
 import AllProduct from './components/AllProduct';
 import Wishlist from './components/Wishlist';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
+  //--------------------initializing AOS library------------------------------
   useEffect(() => {
     AOS.init({
       offset: 120, // offset (in px) from the original trigger point
@@ -47,6 +50,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <ToastContainer />
     </>
   )
 }

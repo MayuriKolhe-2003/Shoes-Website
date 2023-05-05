@@ -3,6 +3,7 @@ import data from '../data/products.json';
 import { FiSearch } from 'react-icons/fi';
 import { Card } from './AllProductsComponents/Card';
 import { useLocation } from 'react-router';
+import { BiMale } from 'react-icons/bi';
 
 
 export default function AllProduct() {
@@ -13,6 +14,7 @@ export default function AllProduct() {
     const allprods = data;
 
 
+    //filter to show only male shoes
     function malechange() {
         isMale(document.getElementById('male').checked);
 
@@ -25,7 +27,7 @@ export default function AllProduct() {
             : changeCards(allprods)
     }
 
-
+    //filter to show only female shoes
     function femalechange() {
         isFemale(document.getElementById('female').checked);
 

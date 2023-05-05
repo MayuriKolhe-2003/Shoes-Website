@@ -11,10 +11,10 @@ const Confirmation = () => {
 							<div className="details_item">
 								<h4>Order Info</h4>
 								<ul className="list">
-									<li><a href="#"><span>Order number</span> : 60235</a></li>
-									<li><a href="#"><span>Date</span> : Los Angeles</a></li>
-									<li><a href="#"><span>Total</span> : USD 2210</a></li>
-									<li><a href="#"><span>Payment method</span> : Check payments</a></li>
+									<li><span>Order number</span> : 60235</li>
+									<li><span>Date</span> : Los Angeles</li>
+									<li><span>Total</span> : USD 2210</li>
+									<li><span>Payment method</span> : Check payments</li>
 								</ul>
 							</div>
 						</div>
@@ -22,10 +22,10 @@ const Confirmation = () => {
 							<div className="details_item">
 								<h4>Billing Address</h4>
 								<ul className="list">
-									<li><a href="#"><span>Street</span> : 56/8</a></li>
-									<li><a href="#"><span>City</span> : Los Angeles</a></li>
-									<li><a href="#"><span>Country</span> : United States</a></li>
-									<li><a href="#"><span>Postcode </span> : 36952</a></li>
+									<li><span>Street</span> : 56/8</li>
+									<li><span>City</span> : Los Angeles</li>
+									<li><span>Country</span> : United States</li>
+									<li><span>Postcode </span> : 36952</li>
 								</ul>
 							</div>
 						</div>
@@ -33,10 +33,10 @@ const Confirmation = () => {
 							<div className="details_item">
 								<h4>Shipping Address</h4>
 								<ul className="list">
-									<li><a href="#"><span>Street</span> : 56/8</a></li>
-									<li><a href="#"><span>City</span> : Los Angeles</a></li>
-									<li><a href="#"><span>Country</span> : United States</a></li>
-									<li><a href="#"><span>Postcode </span> : 36952</a></li>
+									<li><span>Street</span> : 56/8</li>
+									<li><span>City</span> : Los Angeles</li>
+									<li><span>Country</span> : United States</li>
+									<li><span>Postcode </span> : 36952</li>
 								</ul>
 							</div>
 						</div>
