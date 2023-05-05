@@ -3,18 +3,19 @@ import { AiOutlineClose } from 'react-icons/ai'
 import data from '../../data/products.json'
 import { itemid } from '../AllProductsComponents/Card';
 
+
 export default function CartCard() {
 
 	// ----------------------------- Dynamic Cart Functionality -------------------------------------------
 
 	var newdata = []
+	
 
 	for (var i = 0; i < itemid.length; i++) {
 		newdata.push(data[itemid[i]])
 	}
 
 	const [cartItms, setCartItms] = useState(newdata);
-	console.log(cartItms);
 	var currPrice = 0;
 	var subtot = 0;
 
@@ -43,10 +44,7 @@ export default function CartCard() {
 		setCartItms(newdata);
 		setTotalPrice(totalPrice - slprice)
 		setSubPrice(subPrice - price)
-		console.log(totalPrice);
 	}
-
-
 
 	return (
 		<div>
