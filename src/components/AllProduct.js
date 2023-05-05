@@ -99,10 +99,10 @@ export default function AllProduct() {
                         {
                             cards.filter((obj) => {
                                 return search.toLowerCase() === '' ? obj : obj.name.toLowerCase().includes(search)
-                            }).map((obj) => {
+                            }).map((obj,i) => {
                                 return (
                                     <div className="container mt-4 col-6 col-md-3">
-                                        <Card key={obj.id} id={obj.id} name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" onSale={obj.onSale} salePrice={obj.salePrice} type={obj.type} />
+                                        <Card key={i} id={obj.id} name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" onSale={obj.onSale} salePrice={obj.salePrice} type={obj.type} />
                                     </div>
                                 )
                             })

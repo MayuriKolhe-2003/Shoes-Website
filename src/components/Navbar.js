@@ -13,7 +13,7 @@ const Navbar = () => {
 
           {/* --------------------------- Brand Logo ---------------------------------------- */}
 
-          <Link className="navbar-brand " to="/"><img style={{ width: "90px", height: "65px" }} src="logo1.jpg" alt="logo" /></Link>
+          <Link className="navbar-brand " to="/"><img style={{ width: "90px", height: "65px" }} src="logo2.png" alt="logo" /></Link>
 
           {/* ----------------------------- Hamburger Menu ------------------------------------- */}
           <button className="btn btn-danger navbar-toggler border-3 px-2" type="button" data-bs-toggle="offcanvas"
@@ -28,7 +28,7 @@ const Navbar = () => {
 
               {/* ------------------------------- Hamburger TItle ----------------- */}
 
-              <h5 className="offcanvas-title " id="offcanvasExampleLabel">MyShoes Website</h5>
+              <h5 className="offcanvas-title " id="offcanvasExampleLabel">The Shoe Spot</h5>
               <a
                 className="text-reset p-0"
                 data-bs-dismiss="offcanvas"

@@ -10,18 +10,18 @@ const Description = (props) => {
 				{/* -------------- Benefits ---------------- */}
 				<h4>Benefits</h4>
 				<ul list-style='circle'>
-					{shoe.benefits.map((e) => {
+					{shoe.benefits.map((e,i) => {
 						return (
-							<li>{e}</li>
+							<li key={i}>{e}</li>
 						)
 					})}
 				</ul>
 					{/* -------------- Product Details ---------------- */}
 				<h4>Product Details</h4>
 				<ul list-style='circle'>
-					{shoe.details.map((e) => {
+					{shoe.details.map((e,i) => {
 						return (
-							<li>{e}</li>
+							<li key={i}>{e}</li>
 						)
 					})}
 				</ul>

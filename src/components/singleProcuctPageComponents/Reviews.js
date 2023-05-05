@@ -35,9 +35,9 @@ const Reviews = (props) => {
 						{/* -------------- List of reviews ---------------- */}
 						<div className="review_list">
 
-							{shoe.reviews.map((e) => {
+							{shoe.reviews.map((e,i) => {
 								return (
-									<div className="review_item">
+									<div className="review_item" key={i}>
 										<div className="media">
 											<div className="d-flex">
 												<img src={`../../${e.img}`} alt="" />

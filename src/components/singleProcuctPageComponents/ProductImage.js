@@ -36,7 +36,7 @@ const ProductImage = (props) => {
 								<p>{shoe.description}</p>
 								<div className="product_count">
 									<label htmlFor="qty">Quantity:</label>
-									<input type="number" name="qty" value="1" title="Quantity:" className="input-text qty" onChange="" />
+									<input type="number" name="qty" value="1" title="Quantity:" className="input-text qty" readOnly/>
 
 								</div>
 								<div className="card_area d-flex align-items-center">

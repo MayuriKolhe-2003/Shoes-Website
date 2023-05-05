@@ -91,7 +91,7 @@ export default function CartCard() {
 
 															<td className="quantity">
 																<div className="input-group mb-3">
-																	<input type="number" name="quantity" className="quantity form-control input-number" value='1' min="1" max="100" />
+																	<input type="number" name="quantity" className="quantity form-control input-number" value='1' min="1" max="100" readOnly/>
 																</div>
 															</td>
 
