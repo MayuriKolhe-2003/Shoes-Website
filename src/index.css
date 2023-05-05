@@ -185,7 +185,20 @@ a {
   position: relative;
   text-decoration: none;
 }
-.navbar-nav li a:hover::after,
+
+.navbar-nav li a{
+  border: 0;
+  transform-origin: center;
+  transform: scaleX(1);
+  
+}
+
+.navbar-nav li a::after{
+  transform: scaleX(1);
+  border-bottom: 1px solid black;
+}
+
+/* .navbar-nav li a:hover::after,
 .navbar-nav li a.active{
   content: "";
   position: absolute;
@@ -193,7 +206,7 @@ a {
   right: 15%;
   bottom: 0;
   border: 1.3px solid black;
-}
+} */
 .navbar-brand{
   width: 100px;
   height: 70px;

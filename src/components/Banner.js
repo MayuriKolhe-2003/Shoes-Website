@@ -4,7 +4,7 @@ const Banner = (props) => {
 	return (
 		<>
 			{/* ----------------------------- Banner ------------------------------------- */}
-			<section className="banner-area organic-breadcrumb" style={{ background: `url('../assets/choose-3.jpg') `, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+			<section className="banner-area organic-breadcrumb" style={{ background: `url('../assets/banner_new.jpg') `, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
 				<div className="container">
 					<div className="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-center">
 						<div className="col-first">
