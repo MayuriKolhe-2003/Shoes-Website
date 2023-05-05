@@ -25,7 +25,7 @@ const ProductCard = ({product}) => {
             </div>
             <h3><a href={product.url}></a>{product.name}</h3>
             <div className="pricing">
-                <p className="price"><span>{product.price}</span></p>
+                <p className="price"><span>$ {product.price}</span></p>
             </div>
             <p className="bottom-area d-flex px-3">
                 <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1"></i></span></a>
