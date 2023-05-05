@@ -12,13 +12,13 @@ const WishlistCard = (props) => {
                     <img src={props.img} class="shoe-all-imag img-fluid" />
                     <button className='bg-dark text-light p-2'>Move To Bag</button>
                 </div>
-                <div className=' text p-2 text-center'>
-                    <p class="text-danger mb-0">In Stock</p>
+                <div className='text p-2 text-center'>
+                    <p class="text-success mb-0">In Stock</p>
                     <h5 class="card-title mb-2">{props.name}</h5>
                     {
                         props.onSale
-                            ? <p class="card-text fw-medium mt-2">MRP : <span class="text-muted text-decoration-line-through">{props.price}</span> {props.salePrice}</p>
-                            : <p class="card-text fw-medium mt-2">MRP : {props.price}</p>
+                            ? <p class="card-text fw-medium mt-2">MRP : <span class="text-muted text-decoration-line-through">${props.price}</span> ${props.salePrice}</p>
+                            : <p class="card-text fw-medium mt-2">MRP : ${props.price}</p>
                     }
                 </div>
 
