@@ -13,7 +13,7 @@ const NewArrival = () => {
 		loop:true,
 		autoplay: true,
 		nav:true,
-		navText:["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+		navText:["<div className='nav-button owl-prev'>‹</div>", "<div className='nav-button owl-next'>›</div>"],
 		dots:false,
 			responsive: {
 			0: {
@@ -39,9 +39,9 @@ const NewArrival = () => {
 			<section className='section bg-light'>
 				<div className="container">
 					<div className="row justify-content-center mb-3 pb-3">
-						<div className="col-md-12 heading-section text-center ftco-animate">
+						<div className="col-md-12 heading-section text-center ftco-animate" data-aos="fade-up">
 							<h2 className="mb-4 fw-bold">New Shoes Arrival</h2>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+							<p>Have a look at wide range of shoes !</p>
 						</div>
 					</div>
 				</div>

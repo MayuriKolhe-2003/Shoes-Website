@@ -45,14 +45,14 @@ export default function CartCard() {
 
 	return (
 		<div>
-			<section class="cart mt-5">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="cart-list">
-								<table class="table">
-									<thead class="thead-primary">
-										<tr class="text-center">
+			<section className="cart mt-5">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-12">
+							<div className="cart-list">
+								<table className="table">
+									<thead className="thead-primary">
+										<tr className="text-center">
 											<th>&nbsp;</th>
 											<th>&nbsp;</th>
 											<th>Product</th>
@@ -64,29 +64,29 @@ export default function CartCard() {
 
 									{
 										cartItms.length === 0 ?
-											<tr class="text-muted p-3">Cart is empty</tr> :
+											<tr className="text-muted p-3">Cart is empty</tr> :
 											cartItms.map((prod) => {
 												return (
 													<tbody key={prod.id}>
-														<tr class="text-center">
-															<td class="product-remove"><div onClick={() => deleteitm(prod.id, prod.salePrice, prod.price)}><span class="ion-ios-close"><AiOutlineClose /></span></div></td>
+														<tr className="text-center">
+															<td className="product-remove"><div onClick={() => deleteitm(prod.id, prod.salePrice, prod.price)}><span className="ion-ios-close"><AiOutlineClose /></span></div></td>
 
-															<td class="image-prod"><div class="img" style={{ backgroundImage: `url(assets/product-8.png)` }}></div></td>
+															<td className="image-prod"><div className="img" style={{ backgroundImage: `url(assets/product-8.png)` }}></div></td>
 
-															<td class="product-name">
+															<td className="product-name">
 																<h3>{prod.name}</h3>
 																<p>Far far away, behind the word mountains, far from the countries</p>
 															</td>
 
-															<td class="price"><span className='text-muted text-decoration-line-through'> ${prod.price} </span> ${prod.salePrice} </td>
+															<td className="price"><span className='text-muted text-decoration-line-through'> ${prod.price} </span> ${prod.salePrice} </td>
 
-															<td class="quantity">
-																<div class="input-group mb-3">
-																	<input type="number" name="quantity" class="quantity form-control input-number" value='1' min="1" max="100" />
+															<td className="quantity">
+																<div className="input-group mb-3">
+																	<input type="number" name="quantity" className="quantity form-control input-number" value='1' min="1" max="100" />
 																</div>
 															</td>
 
-															<td class="total">${prod.price}</td>
+															<td className="total">${prod.price}</td>
 														</tr>
 													</tbody>
 												)
@@ -97,26 +97,26 @@ export default function CartCard() {
 							</div>
 						</div>
 					</div>
-					<div class="row justify-content-start">
-						<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
-							<div class="cart-total mb-3">
+					<div className="row justify-content-start">
+						<div className="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+							<div className="cart-total mb-3">
 								<h3>Cart Totals</h3>
-								<p class="d-flex">
+								<p className="d-flex">
 									<span>Subtotal</span>
 									<span>${subPrice}</span>
 								</p>
-								<p class="d-flex">
+								<p className="d-flex">
 									<span>Discount</span>
 									<span>${subPrice - totalPrice}</span>
 								</p>
 								<hr />
-								<p class="d-flex total-price">
+								<p className="d-flex total-price">
 									<span>Total</span>
 									<span>${totalPrice}</span>
 								</p>
 
 							</div>
-							<p class="text-center"><a href="/checkout" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+							<p className="text-center"><a href="/checkout" className="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
 						</div>
 					</div>
 				</div>

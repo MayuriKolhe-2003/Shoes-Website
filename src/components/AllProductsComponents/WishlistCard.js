@@ -5,20 +5,20 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 const WishlistCard = (props) => {
     
     return (
-        <div class="card shadow-sm border border-0">
-            <div class="main-shoe container card-body">
-                <div class="card-bg text-center wishlist-card">
+        <div className="card shadow-sm border border-0">
+            <div className="main-shoe container card-body">
+                <div className="card-bg text-center wishlist-card">
                     <AiFillCloseCircle className='circle' onClick={props.deleteFromWishList(props.id)}/>
-                    <img src={props.img} class="shoe-all-imag img-fluid" />
+                    <img src={props.img} className="shoe-all-imag img-fluid" alt='img' />
                     <button className='bg-dark text-light p-2'>Move To Bag</button>
                 </div>
                 <div className=' text p-2 text-center'>
-                    <p class="text-danger mb-0">In Stock</p>
-                    <h5 class="card-title mb-2">{props.name}</h5>
+                    <p className="text-success mb-0">In Stock</p>
+                    <h5 className="card-title mb-2">{props.name}</h5>
                     {
                         props.onSale
-                            ? <p class="card-text fw-medium mt-2">MRP : <span class="text-muted text-decoration-line-through">{props.price}</span> {props.salePrice}</p>
-                            : <p class="card-text fw-medium mt-2">MRP : {props.price}</p>
+                            ? <p className="card-text fw-medium mt-2">MRP : <span className="text-muted text-decoration-line-through">${props.price}</span> ${props.salePrice}</p>
+                            : <p className="card-text fw-medium mt-2">MRP : ${props.price}</p>
                     }
                 </div>
 

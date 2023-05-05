@@ -10,6 +10,9 @@
 svg{
   color: var(--blue);
 }
+svg:hover{
+  color: var(--red);
+}
 
 body {
   background: #fff;
@@ -199,12 +202,12 @@ a {
 .nav-item.i{
   font-size: 26px;
 }
-.nav-item .input-group span{
+.search span{
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
-.nav-item .input-group input,
-.nav-item .input-group input:focus{
+.search  input,
+.search  input:focus{
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   box-shadow: none;

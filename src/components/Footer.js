@@ -92,9 +92,8 @@ const Footer = () => {
 
 
 
-                <div className="text-center fw-light text-muted p-3"style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
-                    © 2023 Copyright : 
-                    <a className="text-white" href="#"> abcd.com</a>
+                <div className="text-center fw-light  p-3">
+                    © 2023 Copyright : abcd.com
                 </div>
 
             </footer>

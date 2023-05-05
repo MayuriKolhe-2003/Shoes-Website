@@ -9,7 +9,7 @@ const Services = () => {
     <>
     <section className=''>
     <div className="container">
-				<div className="row no-gutters ftco-services" data-aos="fade-up" data-aos-duration="1000">
+				<div className="row no-gutters ftco-services" data-aos="fade-up" data-aos-duration="400">
           <div className="col-lg-4 text-center d-flex align-self-stretch" >
             <div className="media block-6 services p-4 py-md-5">
               <div className="icon d-flex justify-content-center align-items-center mb-4">

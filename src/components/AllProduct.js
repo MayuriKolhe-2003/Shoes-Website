@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../data/products.json';
-import {Card} from './AllProductsComponents/Card';
+import { FiSearch } from 'react-icons/fi';
+import { Card } from './AllProductsComponents/Card';
+import { useLocation } from 'react-router';
+
 
 export default function AllProduct() {
     const [Malecheck, isMale] = useState(false);
     const [Femalecheck, isFemale] = useState(false);
-    const [cards,changeCards] = useState(data);
+    const [cards, changeCards] = useState(data);
+    const [search, setSearch] = useState('');
     const allprods = data;
+
 
     function malechange() {
         isMale(document.getElementById('male').checked);
 
         !Malecheck ?
-        changeCards(cards.filter((obj) => {
-            return (
-                obj.type == 'male'
-            )
-        }))
-        : changeCards(allprods)
+            changeCards(cards.filter((obj) => {
+                return (
+                    obj.type === 'male'
+                )
+            }))
+            : changeCards(allprods)
     }
 
 
@@ -25,49 +30,51 @@ export default function AllProduct() {
         isFemale(document.getElementById('female').checked);
 
         !Femalecheck ?
-        changeCards(cards.filter((obj) => {
-            return (
-                obj.type == 'female'
-            )
-        }))
-        : changeCards(allprods)
+            changeCards(cards.filter((obj) => {
+                return (
+                    obj.type === 'female'
+                )
+            }))
+            : changeCards(allprods)
     }
 
+    //console.log(search);
     return (
-        <div class="mt-5 p-5">
-            <div class="d-md-none">
+        <div className="mt-5 p-3">
+
+            <div className="d-md-none">
                 <button>Filter</button>
             </div>
 
 
 
-            <div class="row">
+            <div className="row">
 
                 {/* -------------------- FILTER ---------------------------- */}
 
-                <div class="d-none d-md-inline col-md-2">
-                    <form class="container mt-3 ms-3">
-                        <h2 class="mb-4">Filter</h2>
+                <div className="d-none d-md-inline col-md-2">
+                    <form className="container mt-3 ms-3">
+                        <h2 className="mb-4">Filter</h2>
 
-                        <div class="mb-5">
+                        <div className="mb-5">
 
-                            <p class="mb-2">Lifestyle</p>
-                            <p class="mb-2">Running</p>
-                            <p class="mb-2">Basketball</p>
-                            <p class="mb-2">Football</p>
-                            <p class="mb-2">Training & Gym</p>
-                            <p class="mb-2">Golf</p>
+                            <p className="mb-2">Lifestyle</p>
+                            <p className="mb-2">Running</p>
+                            <p className="mb-2">Basketball</p>
+                            <p className="mb-2">Football</p>
+                            <p className="mb-2">Training & Gym</p>
+                            <p className="mb-2">Golf</p>
                         </div>
                         <hr />
-                        <div class="mb-3">
-                            <h5 class="fs-5 fw-normal mb-3">Gender</h5>
-                            <div class="mb-2">
-                                <input class="me-1" type="checkbox" id="male" name="male" value="Male" onChange={malechange} />
-                                <label for="male"> Male </label>
+                        <div className="mb-3">
+                            <h5 className="fs-5 fw-normal mb-3">Gender</h5>
+                            <div className="mb-2">
+                                <input className="me-1" type="checkbox" id="male" name="male" value="Male" onChange={malechange} />
+                                <label htmlFor="male"> Male </label>
                             </div>
                             <div>
-                                <input class="me-1" type="checkbox" id="female" name="female" value="Female" onChange={femalechange}/>
-                                <label for="female"> Female </label>
+                                <input className="me-1" type="checkbox" id="female" name="female" value="Female" onChange={femalechange} />
+                                <label htmlFor="female"> Female </label>
                             </div>
                         </div>
                     </form>
@@ -75,27 +82,29 @@ export default function AllProduct() {
 
                 {/* -------------------- Cards ---------------------------- */}
 
-                <div class="col col-md-9">
-                    <div class="row mx-2">
+                <div className="col col-md-9">
+                    <div className='d-flex align-items-center justify-content-between'>
+                        <div className='ms-5'>
+                            <h1 className=''>All Available Products</h1>
+                        </div>
+                        <div className="search input-group w-25 me-3">
+                            <span className="input-group-text" id="addon-wrapping"><FiSearch /></span>
+                            <input type="text" className="form-control" onChange={(e) => setSearch(e.target.value)} placeholder="Search" />
+                        </div>
+                    </div>
+
+                    <div className="row mx-2">
                         {
-                            cards.map((obj) => {
+                            cards.filter((obj) => {
+                                return search.toLowerCase() === '' ? obj : obj.name.toLowerCase().includes(search)
+                            }).map((obj) => {
                                 return (
-                                    <div class="container mt-4 col-6 col-md-3">
-                                        <Card key={obj.id} id={obj.id} name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" onSale={obj.onSale} salePrice={obj.salePrice} type={obj.type}/>
+                                    <div className="container mt-4 col-6 col-md-3">
+                                        <Card key={obj.id} id={obj.id} name={obj.name} price={obj.price} img={obj.img} categ="Men's Shoe" onSale={obj.onSale} salePrice={obj.salePrice} type={obj.type} />
                                     </div>
                                 )
                             })
                         }
-
-                        {/* <div class="container mt-4 col-6 col-md-3">
-                            <Card name={data[0].name} price={data[0].price} img={data[0].img} categ="Women's Shoe" />
-                        </div>
-                        <div class="container mt-4 col-6 col-md-3">
-                            <Card name={data[2].name} price={data[2].price} img={data[2].img} categ="Men's Shoe" onSale={data[2].onSale} salePrice={data[2].salePrice} />
-                        </div>
-                        <div class="container mt-4 col-6 col-md-3">
-                            <Card name={data[0].name} price={data[0].price} img={data[0].img} categ="Women's Shoe" onSale={data[2].onSale} salePrice={data[2].salePrice} />
-                        </div> */}
                     </div>
                 </div>
             </div>

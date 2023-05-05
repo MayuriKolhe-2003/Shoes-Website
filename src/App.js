@@ -41,6 +41,7 @@ function App() {
         <Route path='/confirmation' element={<Confirmation />}></Route>
         <Route path='/all-product' element={<AllProduct />}></Route>
         <Route path='/mens' element={<AllProduct />}></Route>
+        <Route path='/mens/single-product/:id' element={<SingleProduct />}></Route>
         <Route path='/womens' element={<AllProduct />}></Route>
         <Route path='/wishlist' element={<Wishlist />}></Route>
       </Routes>
