@@ -32,7 +32,7 @@ To run this project locally, follow these steps:
 8. Access the application in your web browser at http://localhost:3000.
 
 
-## Features
+## Outputs
 ![Website Homepage](Output/Op%20(1).png)
 ![Display of featured products on website](Output/Op%20(2).png)
 ![Single Product Description](Output/Op%20(3).png)
